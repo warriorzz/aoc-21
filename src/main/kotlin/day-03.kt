@@ -1,11 +1,12 @@
 package com.github.warriorzz.aoc
 
-import java.io.File
+import java.nio.file.Files
+import java.nio.file.Path
 
 private fun main() {
     println("Day 03:")
 
-    val lines = File("./input/day-03.txt").readLines()
+    val lines = Files.readAllLines(Path.of("./input/day-03.txt"))
     val map = mutableMapOf<Int, Int>()
     lines.map { it ->
         it.toCharArray().map { it.digitToInt() }

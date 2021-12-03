@@ -1,14 +1,16 @@
 package com.github.warriorzz.aoc
 
-import java.io.File
+import java.nio.file.Files
+import java.nio.file.Path
 import kotlin.math.abs
 
 private fun main() {
     println("Day 02:")
+    val lines = Files.readAllLines(Path.of("./input/day-02.txt"))
 
     var depth = 0
     var horizontal = 0
-    File("./input/day-02.txt").readLines().forEach {
+    lines.forEach {
         it.split(" ").apply {
             when (this.first()) {
                 "forward" -> horizontal += this[1].toInt()
@@ -22,7 +24,7 @@ private fun main() {
     depth = 0
     horizontal = 0
     var aim = 0
-    File("./input/day-02.txt").readLines().forEach {
+    lines.forEach {
         it.split(" ").apply {
             when (this.first()) {
                 "forward" -> {

@@ -1,11 +1,12 @@
 package com.github.warriorzz.aoc
 
-import java.io.File
+import java.nio.file.Files
+import java.nio.file.Path
 
 private fun main() {
     println("Day 01:")
 
-    val input = File("./input/day-01.txt").readLines()
+    val input = Files.readAllLines(Path.of("./input/day-01.txt"))
     var current = -1
     var increases = 0
     for (i in input) {
