@@ -2,7 +2,7 @@ package com.github.warriorzz.aoc
 
 import kotlin.system.exitProcess
 
-private val days = listOf({ day01() }, { day02() }, { day03() }, { day04() }, { day05() }, { day06() })
+private val days = listOf({ day01() }, { day02() }, { day03() }, { day04() }, { day05() }, { day06() }, { day07() })
 
 fun main(args: Array<String>) {
     println("Which day would you like to calculate? (or \"all\" or \"exit\" to exit)")
